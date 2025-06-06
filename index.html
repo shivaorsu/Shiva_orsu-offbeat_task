@@ -99,7 +99,7 @@
         }
 
         .btn-primary {
-            background-color: #f97316;
+            background: linear-gradient(90deg, #f97316, #ff8c00);
             color: white;
             padding: 0.75rem 2rem;
             border-radius: 50px;
@@ -107,11 +107,33 @@
             font-weight: 600;
             transition: transform 0.2s, box-shadow 0.2s;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
 
         /* Hero Section with Parallax */
@@ -229,53 +251,104 @@
         }
 
         .form-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             max-width: 500px;
             margin: 0 auto;
-            opacity: 0;
-            transform: scale(0.95);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(249, 115, 22, 0.2);
         }
 
         .form-container h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 2rem;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: #0f172a;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
         }
 
         .form-group {
+            position: relative;
             margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .form-group:nth-child(1) {
+            animation: fadeInUp 0.8s forwards 0.2s;
+        }
+
+        .form-group:nth-child(2) {
+            animation: fadeInUp 0.8s forwards 0.4s;
+        }
+
+        .form-group:nth-child(3) {
+            animation: fadeInUp 0.8s forwards 0.6s;
         }
 
         .form-group label {
-            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
             font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: #374151;
+            color: #64748b;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus ~ label,
+        .form-group input:not(:placeholder-shown) ~ label {
+            top: 0;
+            left: 40px;
+            font-size: 0.85rem;
+            color: #f97316;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            padding: 0 5px;
         }
 
         .form-group input {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
+            padding: 0.75rem 0.75rem 0.75rem 50px;
+            border: 2px solid #d1d5db;
+            border-radius: 12px;
             font-size: 1rem;
-            transition: border-color 0.2s;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: rgba(255, 255, 255, 0.5);
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #1e40af;
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+            border-color: #f97316;
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
         }
 
-        .form-group input::placeholder {
-            color: #9ca3af;
+        .form-group i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: #f97316;
+            font-size: 1.2rem;
+        }
+
+        .form-submit {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards 0.8s;
         }
 
         /* Learning Outcomes Section */
@@ -372,7 +445,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Wealth Ritual Section (Replaces Host Section) */
+        /* Wealth Ritual Section */
         .wealth-ritual-section {
             padding: 4rem 0;
             background-color: #f8fafc;
@@ -592,6 +665,30 @@
             .wealth-ritual-text h2 {
                 text-align: center;
             }
+
+            .form-container {
+                padding: 2rem;
+            }
+
+            .form-group input {
+                padding: 0.6rem 0.6rem 0.6rem 45px;
+                font-size: 0.95rem;
+            }
+
+            .form-group i {
+                left: 15px;
+                font-size: 1.1rem;
+            }
+
+            .form-group label {
+                left: 45px;
+            }
+
+            .form-group input:focus ~ label,
+            .form-group input:not(:placeholder-shown) ~ label {
+                left: 35px;
+                font-size: 0.75rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -611,6 +708,10 @@
                 padding: 0.5rem 1.5rem;
                 font-size: 0.9rem;
             }
+
+            .form-container h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -623,7 +724,7 @@
             <div class="countdown" id="countdown">
                 <div class="countdown-item"><span id="days">00</span><label>Days</label></div>
                 <div class="countdown-item"><span id="hours">04</span><label>Hours</label></div>
-                <div class="countdown-item"><span id="minutes">00</span><label>Minutes</label></div>
+                <div class="countdown-item"><span id="minutes">15</span><label>Minutes</label></div>
                 <div class="countdown-item"><span id="seconds">00</span><label>Seconds</label></div>
             </div>
             <a href="#register-form" class="btn-primary">Save My Seat – FREE <small>(Limited Spots)</small></a>
@@ -659,18 +760,23 @@
                 <h2>Reserve Your Spot Now</h2>
                 <form id="registerForm" action="https://shankarkulkarni.com/thank-you" method="POST">
                     <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder=" " required>
                         <label for="email">Email ID</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
+                        <i class="fa fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder=" " required>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     </div>
-                    <button type="submit" class="btn-primary">Save My Seat – FREE</button>
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary">Save My Seat – FREE</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -740,7 +846,7 @@
                     <a href="#register-form" class="btn-primary">Join the Masterclass to Get Started</a>
                 </div>
                 <div class="wealth-ritual-image">
-                    <img src="image.jpg" alt="Wealth Ritual">
+                    <img src="https://img.flexifunnels.com/images/6587/SwastikPP_c1mtu_6000.jpeg" alt="Wealth Ritual">
                 </div>
             </div>
         </div>
@@ -779,18 +885,23 @@
             <h2>Reserve Your Spot</h2>
             <form id="modalForm" action="https://shankarkulkarni.com/thank-you" method="POST">
                 <div class="form-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="modal-name" name="name" placeholder=" " required>
                     <label for="modal-name">Full Name</label>
-                    <input type="text" id="modal-name" name="name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="modal-email" name="email" placeholder=" " required>
                     <label for="modal-email">Email ID</label>
-                    <input type="email" id="modal-email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
+                    <i class="fa fa-phone"></i>
+                    <input type="tel" id="modal-phone" name="phone" placeholder=" " required>
                     <label for="modal-phone">Phone Number</label>
-                    <input type="tel" id="modal-phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
-                <button type="submit" class="btn-primary">Submit</button>
+                <div class="form-submit">
+                    <button type="submit" class="btn-primary">Submit</button>
+                </div>
             </form>
         </div>
     </div>
@@ -800,8 +911,7 @@
     <script>
         // Countdown Timer Function
         function startCountdown() {
-            const endTime = new Date();
-            endTime.setHours(endTime.getHours() + 4);
+            const endTime = new Date('June 06, 2025 19:30:00 GMT+0530'); // Webinar start time: 7:30 PM IST
 
             const timer = setInterval(() => {
                 const now = new Date().getTime();
@@ -819,7 +929,7 @@
 
                 if (distance < 0) {
                     clearInterval(timer);
-                    document.getElementById('countdown').innerHTML = '<p>Registration Closed!</p>';
+                    document.getElementById('countdown').innerHTML = '<p>The Masterclass Has Started!</p>';
                 }
             }, 1000);
         }
@@ -853,8 +963,9 @@
 
             // Scroll Animations with Intersection Observer
             const elementsToFadeIn = document.querySelectorAll(
-                '.why-attend h2, .why-attend li, .form-container, .learning-outcomes h2, .outcome-card, ' +
-                '.bonuses h2, .bonus-card, .wealth-ritual-text, .wealth-ritual-image, .faq-section h2, .faq-item, .btn-primary'
+                '.why-attend h2, .why-attend li, .form-container h2, .form-group, .form-submit, ' +
+                '.learning-outcomes h2, .outcome-card, .bonuses h2, .bonus-card, .wealth-ritual-text, ' +
+                '.wealth-ritual-image, .faq-section h2, .faq-item, .btn-primary'
             );
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -868,6 +979,16 @@
 
             elementsToFadeIn.forEach(element => {
                 observer.observe(element);
+            });
+
+            // Form Submission Loading Animation
+            const forms = document.querySelectorAll('#registerForm, #modalForm');
+            forms.forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    const submitBtn = form.querySelector('.btn-primary');
+                    submitBtn.classList.add('loading');
+                    submitBtn.textContent = '';
+                });
             });
 
             startCountdown();
