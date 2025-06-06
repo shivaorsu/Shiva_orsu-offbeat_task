@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1:1:1 Wealth Formula™ | Free Webinar with Shankar Kulkarni</title>
+    <meta name="description" content="Discover how to build massive passive wealth with just 1 hour a week in this free 90-minute masterclass with Shankar Kulkarni.">
+    <link rel="shortcut icon" href="https://img.flexifunnels.com/images/6587/Untitleddesign10_a3mja_400.png" type="image/x-icon">
+    <link rel="canonical" href="https://shankarkulkarni.com/wealth-formula">
+    <meta property="og:url" content="https://shankarkulkarni.com/wealth-formula">
+    <meta property="og:site_name" content="The 1:1:1 Wealth Formula Masterclass">
+    <meta property="og:title" content="The 1:1:1 Wealth Formula™: Build Passive Wealth in 1 Hour a Week">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Learn how to create massive passive wealth with just 1 hour a week in this free masterclass with Shankar Kulkarni.">
+    <meta property="og:image" content="https://img.flexifunnels.com/images/6587/LANDINGPAGEELEMENTSPRODUCTIVITYWEBINARSWASTIKNANDAKUMAR_ayndu_1920.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The 1:1:1 Wealth Formula Masterclass">
+    <meta name="twitter:description" content="Discover how to build massive passive wealth with just 1 hour a week in this free 90-minute masterclass.">
+    <meta name="keywords" content="wealth building, passive income, financial freedom, investment, masterclass">
+    <meta name="author" content="Shankar Kulkarni">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .countdown-item {
+            background: #ffffff;
+            color: #0f172a;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            min-width: 80px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .countdown-item span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .countdown-item label {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Hero Section with Parallax */
+        .hero {
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://img.flexifunnels.com/images/6587/LANDINGPAGEELEMENTSPRODUCTIVITYWEBINARSWASTIKNANDAKUMAR_ayndu_1920.png') center/cover no-repeat;
+            z-index: -1;
+            transform: translateY(0);
+            transition: transform 0.1s ease-out;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Why Attend Section */
+        .why-attend {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .why-attend h2 {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0f172a;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .why-attend ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .why-attend li {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f1f5f9;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .why-attend li:hover {
+            transform: translateX(10px);
+        }
+
+        .why-attend li i {
+            color: #f97316;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 4rem 0;
+            background-color: #f8fafc;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .form-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+
+        /* Learning Outcomes Section */
+        .learning-outcomes {
+            padding: 4rem 0;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .learning-outcomes h2 {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .outcome-card {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+
+        .outcome-card img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .outcome-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .outcome-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .outcome-card p {
+            font-size: 0.9rem;
+        }
+
+        /* Bonuses Section */
+        .bonuses {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .bonuses h2 {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0f172a;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .bonus-card {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .bonus-card:hover {
+            transform: scale(1.05);
+        }
+
+        .bonus-card i {
+            font-size: 2rem;
+            color: #f97316;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Wealth Ritual Section (Replaces Host Section) */
+        .wealth-ritual-section {
+            padding: 4rem 0;
+            background-color: #f8fafc;
+        }
+
+        .wealth-ritual-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wealth-ritual-text {
+            flex: 1;
+            min-width: 300px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .wealth-ritual-text h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            text-align: left;
+        }
+
+        .wealth-ritual-text ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .wealth-ritual-text li {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .wealth-ritual-text li i {
+            color: #f97316;
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .wealth-ritual-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .wealth-ritual-image img {
+            max-width: 394px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wealth-ritual-image:hover img {
+            transform: rotate(5deg);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(249, 115, 22, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+            }
+        }
+
+        .wealth-ritual-image img {
+            animation: pulse 3s infinite;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0f172a;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .faq-item {
+            background: #f1f5f9;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .faq-item summary {
+            padding: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-item summary i {
+            color: #f97316;
+            transition: transform 0.3s;
+        }
+
+        .faq-item[open] summary i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item p {
+            padding: 1rem;
+            margin: 0;
+            display: none;
+        }
+
+        .faq-item[open] p {
+            display: block;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-content .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Fade-in Animation for Scroll */
+        .fade-in {
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) translateX(0) scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+            }
+
+            .countdown-item span {
+                font-size: 1.5rem;
+            }
+
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wealth-ritual-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .wealth-ritual-text h2 {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Countdown -->
+    <header class="header">
+        <div class="container">
+            <h1>The 1:1:1 Wealth Formula™</h1>
+            <h2>Friday, 6th June 2025 | 7:30 PM to 9:00 PM IST</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item"><span id="days">00</span><label>Days</label></div>
+                <div class="countdown-item"><span id="hours">04</span><label>Hours</label></div>
+                <div class="countdown-item"><span id="minutes">00</span><label>Minutes</label></div>
+                <div class="countdown-item"><span id="seconds">00</span><label>Seconds</label></div>
+            </div>
+            <a href="#register-form" class="btn-primary">Save My Seat – FREE <small>(Limited Spots)</small></a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <h1>1 Hour. 1 Ritual. 1 Freedom Goal.</h1>
+            <p>You’re One Hour Away From Building a Lifetime of Wealth with Shankar Kulkarni’s Proven System.</p>
+            <a href="#register-form" class="btn-primary">Join the Free Masterclass</a>
+        </div>
+    </section>
+
+    <!-- Why Attend Section -->
+    <section class="why-attend">
+        <div class="container">
+            <h2>Who This Is Perfect For</h2>
+            <ul>
+                <li><i class="fa fa-check-circle"></i>Indian Professionals 40+, Married, Busy Building Their Lives</li>
+                <li><i class="fa fa-check-circle"></i>Tired of wasting time on random advice that leads nowhere</li>
+                <li><i class="fa fa-check-circle"></i>Serious about building passive wealth with simplicity, not stress</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="register-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Reserve Your Spot Now</h2>
+                <form id="registerForm" action="https://shankarkulkarni.com/thank-you" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Save My Seat – FREE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Outcomes Section -->
+    <section class="learning-outcomes">
+        <div class="container">
+            <h2>What You’ll Learn in 90 Minutes</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <img src="https://img.flexifunnels.com/images/6587/11_i4mji_500.png" alt="The 1-Hour Wealth Ritual">
+                    <h3>The 1-Hour Wealth Ritual</h3>
+                    <p>A simple weekly habit that builds passive wealth — automatically.</p>
+                </div>
+                <div class="outcome-card">
+                    <img src="https://img.flexifunnels.com/images/6587/2_u5mda_500.png" alt="The Buy-Low, Sell-High Blueprint">
+                    <h3>The Buy-Low, Sell-High Blueprint</h3>
+                    <p>A clear method to beat inflation without chasing stocks or trends.</p>
+                </div>
+                <div class="outcome-card">
+                    <img src="https://img.flexifunnels.com/images/6587/3_uymdk_500.png" alt="The Freedom Goal Setting System">
+                    <h3>The Freedom Goal Setting System</h3>
+                    <p>How to define and lock-in your ultimate financial freedom number.</p>
+                </div>
+                <div class="outcome-card">
+                    <img src="https://img.flexifunnels.com/images/6587/4_y5ndk_500.png" alt="The Silent Wealth Building Method">
+                    <h3>The Silent Wealth Building Method</h3>
+                    <p>Grow rich without noise, stress, or confusion — even if starting late.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Section -->
+    <section class="bonuses">
+        <div class="container">
+            <h2>Special Registration Bonuses</h2>
+            <div class="bonus-card">
+                <i class="fa fa-list-check"></i>
+                <h3>100 Financial Freedom Tasks Checklist</h3>
+                <p>Small steps, huge shifts. Unlock the full momentum of wealth.</p>
+            </div>
+            <div class="bonus-card">
+                <i class="fa fa-file-alt"></i>
+                <h3>The 1-Page Weekly Wealth Ritual Blueprint</h3>
+                <p>Print it. Follow it. Let it quietly transform your money life.</p>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#register-form" class="btn-primary">Claim Your Bonuses – FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wealth Ritual Section -->
+    <section class="wealth-ritual-section">
+        <div class="container">
+            <div class="wealth-ritual-content">
+                <div class="wealth-ritual-text">
+                    <h2>Your 1-Hour Wealth Ritual</h2>
+                    <ul>
+                        <li><i class="fa fa-coffee"></i>Sunday morning: Grab your coffee and sit down for just 1 hour.</li>
+                        <li><i class="fa fa-check-circle"></i>Follow your 1-Page Wealth Ritual Blueprint to review and adjust your investments.</li>
+                        <li><i class="fa fa-clock"></i>Done in 60 minutes — your wealth grows quietly while you enjoy the rest of your week.</li>
+                        <li><i class="fa fa-money-bill-wave"></i>Watch your money work harder than you ever could, building towards your ₹5 Cr goal.</li>
+                    </ul>
+                    <a href="#register-form" class="btn-primary">Join the Masterclass to Get Started</a>
+                </div>
+                <div class="wealth-ritual-image">
+                    <img src="image.jpg" alt="Wealth Ritual">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <details class="faq-item">
+                <summary>Will there be a replay? <i class="fa fa-chevron-down"></i></summary>
+                <p>No, there will be no replays. This is a live masterclass, and spots are limited.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How long is the masterclass? <i class="fa fa-chevron-down"></i></summary>
+                <p>The masterclass is 90 minutes, packed with actionable insights.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Is this really free? <i class="fa fa-chevron-down"></i></summary>
+                <p>Yes, the masterclass is 100% free. Our goal is to help you start your wealth-building journey.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need any prior experience? <i class="fa fa-chevron-down"></i></summary>
+                <p>No experience needed. This masterclass is designed for beginners and busy professionals alike.</p>
+            </details>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#register-form" class="btn-primary">Save My Seat – FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Reserve Your Spot</h2>
+            <form id="modalForm" action="https://shankarkulkarni.com/thank-you" method="POST">
+                <div class="form-group">
+                    <label for="modal-name">Full Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email ID</label>
+                    <input type="email" id="modal-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Phone Number</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Countdown Timer Function
+        function startCountdown() {
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 4);
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('countdown').innerHTML = '<p>Registration Closed!</p>';
+                }
+            }, 1000);
+        }
+
+        // Modal Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('modal');
+            const closeBtn = document.querySelector('.modal-content .close');
+
+            setTimeout(() => {
+                modal.style.display = 'flex';
+                modal.classList.add('show');
+            }, 5000);
+
+            closeBtn.onclick = () => {
+                modal.style.display = 'none';
+            };
+
+            window.onclick = (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+
+            // Parallax Effect
+            const heroBackground = document.querySelector('.hero-background');
+            window.addEventListener('scroll', () => {
+                let offset = window.scrollY;
+                heroBackground.style.transform = `translateY(${offset * 0.5}px)`;
+            });
+
+            // Scroll Animations with Intersection Observer
+            const elementsToFadeIn = document.querySelectorAll(
+                '.why-attend h2, .why-attend li, .form-container, .learning-outcomes h2, .outcome-card, ' +
+                '.bonuses h2, .bonus-card, .wealth-ritual-text, .wealth-ritual-image, .faq-section h2, .faq-item, .btn-primary'
+            );
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elementsToFadeIn.forEach(element => {
+                observer.observe(element);
+            });
+
+            startCountdown();
+        });
+    </script>
+</body>
+</html>
